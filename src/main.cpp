@@ -5,7 +5,7 @@ using namespace std;
 
 const string letters = "abcdefghijklmnopqrstuvwxyz";
 const string numbers = "1234567890";
-const string characters = "~`!@#$%^&*()_-+={[}]|:<>?,./";
+const string characters = "~`!@#$%^&*()_-+=|[]:<>?,./";
 
 // generate random password of specified length
 string generate_password(int length) {
@@ -51,6 +51,10 @@ string generate_password(int length) {
 
 // main
 int main() {
+    int char_num = 0;
+    string input = "";
+    cout << "How many characters? ";
+    cin >> char_num;
     cout << "password: ";
-    cout << generate_password(8);
+    cout << generate_password(char_num) + "\n";
 }
